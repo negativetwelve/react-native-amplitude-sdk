@@ -1,0 +1,42 @@
+{
+  "name": "react-native-amplitude-sdk",
+  "version": "0.1.0",
+  "description": "React Native wrapper for Amplitude.",
+  "main": "./src/Amplitude.js",
+  "files": [
+    "ios",
+    "react-native-amplitude-sdk.podspec",
+    "src"
+  ],
+  "keywords": [
+    "analytics",
+    "amplitude",
+    "ios",
+    "react-native"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com> (https://github.com/negativetwelve)",
+  "contributors": [
+    {
+      "name": "Mark Miyashita",
+      "email": "negativetwelve@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/negativetwelve/react-native-amplitude-sdk.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/negativetwelve/react-native-amplitude-sdk/issues"
+  },
+  "homepage": "https://github.com/negativetwelve/react-native-amplitude-sdk",
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "7.0.0",
+    "eslint": "3.8.1"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
