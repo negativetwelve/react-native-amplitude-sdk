@@ -18,22 +18,22 @@ class Amplitude {
   // Identify
   // --------------------------------------------------
   setUserId(userId) {
-    return Amplitude.setUserId(userId.toString());
+    return RNAmplitude.setUserId(userId.toString());
   }
 
   setUserProperties(properties) {
-    return Amplitude.setUserProperties(properties);
+    return RNAmplitude.setUserProperties(properties);
   }
 
   clearUserProperties() {
-    return Amplitude.clearUserProperties();
+    return RNAmplitude.clearUserProperties();
   }
 
   // --------------------------------------------------
   // Track
   // --------------------------------------------------
   logEvent(name, properties) {
-    return Amplitude.logEvent(name, properties);
+    return RNAmplitude.logEvent(name, properties);
   }
 
 }
