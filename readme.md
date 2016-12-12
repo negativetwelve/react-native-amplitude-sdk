@@ -30,6 +30,10 @@ You're done! :tada:
 
 **NOTE** Your relative path to `node_modules` may differ.
 
+### iOS with Carthage
+
+Read instructions (2, 3 and 4): [Amplitude for iOS](https://github.com/amplitude/Amplitude-iOS#setup)
+
 ### Android
 
 Coming soon, PRs welcome!

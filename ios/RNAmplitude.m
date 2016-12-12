@@ -8,8 +8,8 @@
 
 
 #import "RNAmplitude.h"
-#import "Amplitude-iOS/Amplitude.h"
-#import "AMPIdentify.h"
+#import <Amplitude/Amplitude.h>
+#import <Amplitude/AMPIdentify.h>
 
 
 @implementation RNAmplitude
