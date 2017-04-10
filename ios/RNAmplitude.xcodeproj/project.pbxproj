@@ -72,7 +72,7 @@
 			dependencies = (
 			);
 			name = RNAmplitude;
-			productName = RNUXCam;
+			productName = RNAmplitude;
 			productReference = 112EE36D1CC0AB8A00BF6BB8 /* libRNAmplitude.a */;
 			productType = "com.apple.product-type.library.static";
 		};
