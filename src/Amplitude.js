@@ -5,58 +5,31 @@ import {NativeModules, Platform} from 'react-native';
 const {RNAmplitude} = NativeModules;
 
 
-class Amplitude {
+// Wraps native functions so they are no-ops on android.
+const noop = () => {};
+const safe = (callback) => Platform.OS === 'android' ? noop : callback;
+const guard = (object) => {
+  const safeObject = {};
 
-  // --------------------------------------------------
+  // Copies all key/values and wraps each value inside a safe callback.
+  Object.keys(object).forEach(key => safeObject[key] = safe(object[key]));
+
+  // Returns the new cloned object.
+  return safeObject;
+};
+
+const Amplitude = {
   // Initialize
-  // --------------------------------------------------
-  initializeApiKey(key) {
-    if (Platform.OS === 'android') {
-      return;
-    }
+  initializeApiKey: (key) => RNAmplitude.initializeApiKey(key),
 
-    return RNAmplitude.initializeApiKey(key);
-  }
+  // User
+  setUserId: (userId) => RNAmplitude.setUserId(userId.toString()),
+  setUserProperties: (properties) => RNAmplitude.setUserProperties(properties),
+  clearUserProperties: () => RNAmplitude.clearUserProperties(),
 
-  // --------------------------------------------------
-  // Identify
-  // --------------------------------------------------
-  setUserId(userId) {
-    if (Platform.OS === 'android') {
-      return;
-    }
-
-    return RNAmplitude.setUserId(userId.toString());
-  }
-
-  setUserProperties(properties) {
-    if (Platform.OS === 'android') {
-      return;
-    }
-
-    return RNAmplitude.setUserProperties(properties);
-  }
-
-  clearUserProperties() {
-    if (Platform.OS === 'android') {
-      return;
-    }
-
-    return RNAmplitude.clearUserProperties();
-  }
-
-  // --------------------------------------------------
-  // Track
-  // --------------------------------------------------
-  logEvent(name, properties) {
-    if (Platform.OS === 'android') {
-      return;
-    }
-
-    return RNAmplitude.logEvent(name, properties);
-  }
-
-}
+  // Events
+  logEvent: (name, properties) => RNAmplitude.logEvent(name, properties),
+};
 
 
-export default new Amplitude();
+export default guard(Amplitude);
