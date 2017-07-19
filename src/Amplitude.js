@@ -1,5 +1,5 @@
 // Libraries
-import {NativeModules} from 'react-native';
+import {NativeModules, Platform} from 'react-native';
 
 // Native Modules
 const {RNAmplitude} = NativeModules;
@@ -11,6 +11,10 @@ class Amplitude {
   // Initialize
   // --------------------------------------------------
   initializeApiKey(key) {
+    if (Platform.OS === 'android') {
+      return;
+    }
+
     return RNAmplitude.initializeApiKey(key);
   }
 
@@ -18,14 +22,26 @@ class Amplitude {
   // Identify
   // --------------------------------------------------
   setUserId(userId) {
+    if (Platform.OS === 'android') {
+      return;
+    }
+
     return RNAmplitude.setUserId(userId.toString());
   }
 
   setUserProperties(properties) {
+    if (Platform.OS === 'android') {
+      return;
+    }
+
     return RNAmplitude.setUserProperties(properties);
   }
 
   clearUserProperties() {
+    if (Platform.OS === 'android') {
+      return;
+    }
+
     return RNAmplitude.clearUserProperties();
   }
 
@@ -33,6 +49,10 @@ class Amplitude {
   // Track
   // --------------------------------------------------
   logEvent(name, properties) {
+    if (Platform.OS === 'android') {
+      return;
+    }
+
     return RNAmplitude.logEvent(name, properties);
   }
 
