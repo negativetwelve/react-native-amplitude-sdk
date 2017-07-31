@@ -35,6 +35,17 @@ You're done! :tada:
 
 **NOTE** Your relative path to `node_modules` may differ.
 
+### iOS with Carthage
+
+Currently, the npm module doesn't work well with Carthage. See this [issue](https://github.com/negativetwelve/react-native-amplitude-sdk/issues/7) for details.
+
+Run:
+```
+npm install --save git+https://github.com/arthur31416/react-native-amplitude-sdk.git
+```
+
+Read instructions (2, 3 and 4): [Amplitude for iOS](https://github.com/amplitude/Amplitude-iOS#setup)
+
 ### Android
 
 Coming soon, PRs welcome!
