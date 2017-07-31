@@ -1,6 +1,6 @@
 {
   "name": "react-native-amplitude-sdk",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "React Native wrapper for Amplitude.",
   "main": "./build/Amplitude.js",
   "files": [
