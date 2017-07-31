@@ -2,16 +2,17 @@
   "name": "react-native-amplitude-sdk",
   "version": "0.4.3",
   "description": "React Native wrapper for Amplitude.",
-  "main": "./src/Amplitude.js",
+  "main": "./build/Amplitude.js",
   "files": [
+    "build",
     "ios",
-    "react-native-amplitude-sdk.podspec",
-    "src"
+    "react-native-amplitude-sdk.podspec"
   ],
   "keywords": [
     "analytics",
     "amplitude",
     "ios",
+    "jolt",
     "react-native"
   ],
   "author": "Mark Miyashita <negativetwelve@gmail.com> (https://github.com/negativetwelve)",
@@ -33,10 +34,24 @@
   "engines": {},
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "7.0.0",
-    "eslint": "3.8.1"
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.0",
+    "babel-preset-jolt": "^1.0.0",
+    "eslint-config-jolt": "^1.0.2",
+    "jest": "^20.0.0"
+  },
+  "babel": {
+    "presets": [
+      "jolt"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "jolt"
   },
   "scripts": {
-    "lint": "eslint ."
+    "build": "babel js --out-dir build --ignore '**/*.spec.js'",
+    "lint": "eslint js",
+    "prepublishOnly": "yarn build",
+    "test": "jest"
   }
 }
