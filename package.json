@@ -2,10 +2,10 @@
   "name": "react-native-amplitude-sdk",
   "version": "0.5.0",
   "description": "React Native wrapper for Amplitude.",
-  "main": "./build/Amplitude.js",
+  "main": "./js/Amplitude.js",
   "files": [
-    "build",
     "ios",
+    "js",
     "react-native-amplitude-sdk.podspec"
   ],
   "keywords": [
@@ -34,24 +34,13 @@
   "engines": {},
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-jest": "^20.0.0",
-    "babel-preset-jolt": "^1.0.0",
-    "eslint-config-jolt": "^1.0.2",
-    "jest": "^20.0.0"
-  },
-  "babel": {
-    "presets": [
-      "jolt"
-    ]
+    "eslint-config-jolt": "^1.0.2"
   },
   "eslintConfig": {
     "extends": "jolt"
   },
   "scripts": {
-    "build": "babel js --out-dir build --ignore '**/*.spec.js'",
     "lint": "eslint js",
-    "prepublishOnly": "yarn build",
-    "test": "jest"
+    "test": "echo 'No Tests'"
   }
 }
