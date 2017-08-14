@@ -32,7 +32,9 @@
   },
   "homepage": "https://github.com/negativetwelve/react-native-amplitude-sdk",
   "engines": {},
-  "dependencies": {},
+  "dependencies": {
+    "react-native-package": "^1.1.0"
+  },
   "peerDependencies": {
     "react-native": "*"
   },
