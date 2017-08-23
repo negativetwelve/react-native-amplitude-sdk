@@ -7,14 +7,10 @@
 
 React Native wrapper for [Amplitude](https://amplitude.com).
 
-## Setup
+## Getting Started
 
-```bash
-# Yarn
+```shell
 yarn add react-native-amplitude-sdk
-
-# NPM
-npm install --save react-native-amplitude-sdk
 ```
 
 ### iOS with Cocoapods
